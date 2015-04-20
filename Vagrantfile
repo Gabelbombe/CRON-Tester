@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "trusty.io"
   config.vm.provision :shell, :path => "scripts/mute_ssh.sh"
   config.vm.provision :shell, :path => "scripts/bootstrap.sh"
+  config.vm.provision :shell, :path => "scripts/payload.sh"
 
   # Visit the site at http://192.168.50.4
   config.vm.network :private_network, ip: "192.168.50.99"
